@@ -1,14 +1,64 @@
 body{
+  background-color: wheat;
   display: flex;
-  width: 100%;
-  justify-content: center;
-  
 }
+
+
 
 .container {
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 80%;
-  padding:20px;
+  width: 70vh;
+  
+
+}
+
+#clickEdit {
+  display: "inline-block";
+  height: 25px;
+  min-width: 300px;
+}
+
+.topSection {
+  display: flex;
+  background-color:black;
+  color: white;
+  height: 150px;
+  width: 100%;
+  justify-content: center;
+  font-size: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-items: center;
+}
+
+#upperPage{
+  width: 100vw;
+}
+
+#midPage{
+
+  display: flex;
+  justify-content: center;
+}
+
+.toDo{
+  margin-top:2vh ;
+  height:70vh;
+  padding:1vh;
+  background-color: skyblue;
+  border-style: groove;
+  border-width: 1vh;
+  border-color: rgb(53, 53, 53);
+}
+
+.done{
+  margin-top:2vh ;
+  height:70vh;
+  padding:1vh;
+  background-color: skyblue;
+  background-color: skyblue;
+  border-style: groove;
+  border-width: 1vh;
+  border-color: rgb(53, 53, 53);
 }

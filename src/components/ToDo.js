@@ -1,22 +1,24 @@
 import {useState} from 'react';
-
-
+import AddItem from './AddItem'
+import EditElement from './EditElement'
 
 
 const ToDo = () => {
     const [list1, setList1] = useState([])
     const [list2, setList2] = useState([])
     const [input, setInput] = useState("")
+    // const [text, setText] = useState("")
 
     const clearList = () => {
         setList2([])
     }
     
-    const edit = () => {
-
-        const temp = [...list1];
-        // const editItem = temp.splice(index, 1)
-    }
+    // const edit = (index) => {
+    //     const temp = [...list1]
+    //     const text = temp(index, 1)
+        
+        
+    // }
 
 
     const addItem = (e) => {
@@ -52,7 +54,7 @@ const ToDo = () => {
        <div class = "container">
         <div class = "toDo">
         
-        <h1>To Do List</h1>
+        <h1>Items To Do</h1>
     <form onSubmit={addItem}>
      <input type="text" id="inputBox" value={input} onChange={(event) => setInput(event.target.value)} />
      <button>Add To List</button>
@@ -60,18 +62,19 @@ const ToDo = () => {
         {list1.map((item) => {
         return(
           <div key={item} >
-            <p>{item} <button id="edit" onClick={edit}>Edit</button><button id ="completeButton" onClick={completeItem}>Complete</button></p>
+            <p>{item} <button id="edit">Edit</button><button id ="completeButton" onClick={completeItem}>Complete</button></p>
             </div>
         )})}</div>
         <div class = "done">
             <h1>Complete Tasks</h1>
+            <button id = "clearList" onClick={clearList}>Clear Complete</button>
             {list2.map((item, index) => {
         return(
-          <div key={item} onClick={() => completeItem(index)}>
+          <div key={item}>
             <p>{item} </p>
             </div>
         )})}
-        <button id = "clearList" onClick={clearList}>Clear Complete</button>
+        
         </div>
 
             
