@@ -7,19 +7,10 @@ const ToDo = () => {
     const [list1, setList1] = useState([])
     const [list2, setList2] = useState([])
     const [input, setInput] = useState("")
-    // const [text, setText] = useState("")
 
     const clearList = () => {
         setList2([])
     }
-    
-    // const edit = (index) => {
-    //     const temp = [...list1]
-    //     const text = temp(index, 1)
-        
-        
-    // }
-
 
     const addItem = (e) => {
         e.preventDefault();
@@ -31,25 +22,23 @@ const ToDo = () => {
     
 
     const completeItem = (event, index) => {
-        const temp = [...list1]
-        const removedItem = temp.splice(index, 1)
-        setList1(temp)
+        const temp = [...list1];
+        const removedItem = temp.splice(index, 1);
+        setList1(temp);
 
-        const temp2 = [...list2]
-        temp2.push(...removedItem)
+        const temp2 = [...list2];
+        temp2.push(...removedItem);
         setList2(temp2)
+        
     }
 
     const deleteItem = (index) => {
-        const temp = [...list1]
+        const temp = [...list2]
         temp.splice(index, 1)
-        setList1(temp)
-        setInput("")
+        setList2(temp)
+
     }
     
-    let moveItem = ""
-    const enterInput = document.getElementById("inputBox")
-
     return( 
        <div class = "container">
         <div class = "toDo">
@@ -59,33 +48,26 @@ const ToDo = () => {
      <input type="text" id="inputBox" value={input} onChange={(event) => setInput(event.target.value)} />
      <button>Add To List</button>
     </form>
-        {list1.map((item) => {
+        {list1.map((item, index) => {
         return(
-          <div key={item} >
-            <p>{item} <button id="edit">Edit</button><button id ="completeButton" onClick={completeItem}>Complete</button></p>
+          <div key={item} id = "list1">
+            <div><p id = "itemStyle">{item}</p></div><div><button id="edit">Edit</button><button id ="completeButton" onClick={completeItem}>Complete</button></div>
             </div>
         )})}</div>
-        <div class = "done">
+        <div className = "done">
             <h1>Complete Tasks</h1>
-            <button id = "clearList" onClick={clearList}>Clear Complete</button>
+            <button id = "clearList" onClick={clearList}>Clear Complete List</button>
             {list2.map((item, index) => {
         return(
-          <div key={item}>
-            <p>{item} </p>
-            </div>
+          <div key={item} id = "list2">
+            <div><p id= "itemStyle2">{item}</p></div><div><button id="delete" onClick={deleteItem}>Delete</button>
+            </div></div>
         )})}
         
         </div>
 
+        </div>   )} 
             
-            
-            
-        </div>
 
-
-
-
-        
-    )}
 
     export default ToDo;

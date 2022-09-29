@@ -45,20 +45,64 @@ body{
 .toDo{
   margin-top:2vh ;
   height:70vh;
-  padding:1vh;
-  background-color: skyblue;
+  width: 30vh;
+  padding:0.5vh;
+  background-color: rgb(135, 206, 235, 0.6);
   border-style: groove;
   border-width: 1vh;
   border-color: rgb(53, 53, 53);
+  box-shadow: 3px 3px grey;
 }
 
 .done{
   margin-top:2vh ;
   height:70vh;
-  padding:1vh;
-  background-color: skyblue;
-  background-color: skyblue;
+  width: 30vh;
+  padding:0.5vh;
+  background-color: rgb(135, 206, 235, 0.6);
   border-style: groove;
   border-width: 1vh;
   border-color: rgb(53, 53, 53);
+  box-shadow: 3px 3px grey;
+}
+
+
+
+
+
+
+h1{
+  font-size: 30px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+  text-shadow:1px 1px rgb(238, 238, 238);
+  text-decoration:underline;
+}
+
+#list1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#list2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#itemStyle{
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 0.5vh;
+  font-family:Arial, Helvetica, sans-serif;
+
+}
+
+#itemStyle2{
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 0.5vh;
+  font-family:Arial, Helvetica, sans-serif;
+  text-decoration: line-through;
 }
