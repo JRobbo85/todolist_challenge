@@ -1,41 +1,40 @@
 import {useState} from 'react';
-import {useEffect} from 'react';
+
 
 
 
 const ToDo = () => {
-    const [list1, setList1] = useState([""])
-    const [list2, setList2] = useState([""])
+    const [list1, setList1] = useState([])
+    const [list2, setList2] = useState([])
     const [input, setInput] = useState("")
-    useEffect(() => {
-        console.log(input)
-        enterPress()
-    })
 
+    const clearList = () => {
+        setList2([])
+    }
     
-    const addItem = () => {
-    const temp = [...list1]
-    temp.push(input)
-    setList1(temp)
-    setInput("")
+    const edit = () => {
+
+        const temp = [...list1];
+        // const editItem = temp.splice(index, 1)
     }
 
-    const enterPress = () => {
-        enterInput.addEventListener("keypress", (event) => {
-            if (event.which == 13){
-                return (addItem())
-            } 
-            else{}
-        })
-    }
 
+    const addItem = (e) => {
+        e.preventDefault();
+        const temp = [...list1];
+        temp.push(input);
+        setList1(temp);
+        setInput("");
+      };
     
 
     const completeItem = (event, index) => {
-        event.preventDefault()
-        const temp2 = [...list1]
-        temp2.splice(index, 1)
-        temp2.push(index)
+        const temp = [...list1]
+        const removedItem = temp.splice(index, 1)
+        setList1(temp)
+
+        const temp2 = [...list2]
+        temp2.push(...removedItem)
         setList2(temp2)
     }
 
@@ -49,20 +48,19 @@ const ToDo = () => {
     let moveItem = ""
     const enterInput = document.getElementById("inputBox")
 
-    
-
-
     return( 
        <div class = "container">
         <div class = "toDo">
         
         <h1>To Do List</h1>
-        <input type="text" id = "inputBox" value={input} onKeyPress={(e) => enterPress(e)} onChange={(event) => setInput(event.target.value)} />
-        <button onClick={addItem}>Add To List</button>
+    <form onSubmit={addItem}>
+     <input type="text" id="inputBox" value={input} onChange={(event) => setInput(event.target.value)} />
+     <button>Add To List</button>
+    </form>
         {list1.map((item) => {
         return(
           <div key={item} >
-            <p>{item} {item === "" ? null : <button id ="completeButton" onClick={completeItem}>Complete</button>}</p>
+            <p>{item} <button id="edit" onClick={edit}>Edit</button><button id ="completeButton" onClick={completeItem}>Complete</button></p>
             </div>
         )})}</div>
         <div class = "done">
@@ -70,11 +68,11 @@ const ToDo = () => {
             {list2.map((item, index) => {
         return(
           <div key={item} onClick={() => completeItem(index)}>
-            <p>{item}</p>
+            <p>{item} </p>
             </div>
         )})}
-
-</div>
+        <button id = "clearList" onClick={clearList}>Clear Complete</button>
+        </div>
 
             
             
