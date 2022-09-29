@@ -21,7 +21,7 @@ const ToDo = () => {
       };
     
 
-    const completeItem = (event, index) => {
+    const completeItem = (index) => {
         const temp = [...list1];
         const removedItem = temp.splice(index, 1);
         setList1(temp);
@@ -51,7 +51,7 @@ const ToDo = () => {
         {list1.map((item, index) => {
         return(
           <div key={item} id = "list1">
-            <div><p id = "itemStyle">{item}</p></div><div><button id="edit">Edit</button><button id ="completeButton" onClick={completeItem}>Complete</button></div>
+            <div><p id = "itemStyle">{item}</p></div><div><button id="edit">Edit</button><button id ="completeButton" onClick={() => completeItem(index)}>Complete</button></div>
             </div>
         )})}</div>
         <div className = "done">
@@ -60,7 +60,7 @@ const ToDo = () => {
             {list2.map((item, index) => {
         return(
           <div key={item} id = "list2">
-            <div><p id= "itemStyle2">{item}</p></div><div><button id="delete" onClick={deleteItem}>Delete</button>
+            <div><p id= "itemStyle2">{item}</p></div><div><button id="delete" onClick={() => deleteItem(index)}>Delete</button>
             </div></div>
         )})}
         
