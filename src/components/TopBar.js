@@ -1,8 +1,12 @@
-import react from 'react'
+
 
 const TopBar = () => {
     return (
-        <div class = "topSection">To Do List</div>
+        <div class = "topSection">
+            <div class = "text1">TO DO LIST</div>
+            
+        </div>
+        
     )
 }
 
