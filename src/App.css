@@ -37,38 +37,47 @@ body{
 }
 
 #midPage{
-
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-evenly;
+}
+
+.container{
+  width: 120vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#form1{
+  display: flex;
+  justify-content: space-between;
 }
 
 .toDo{
   margin-top:2vh ;
   height:70vh;
-  width: 30vh;
+  width: 35vh;
   padding:0.5vh;
   background-color: rgb(135, 206, 235, 0.6);
   border-style: groove;
   border-width: 1vh;
   border-color: rgb(53, 53, 53);
   box-shadow: 3px 3px grey;
+  overflow-y:scroll;
 }
 
 .done{
   margin-top:2vh ;
   height:70vh;
-  width: 30vh;
+  width: 35vh;
   padding:0.5vh;
   background-color: rgb(135, 206, 235, 0.6);
   border-style: groove;
   border-width: 1vh;
   border-color: rgb(53, 53, 53);
   box-shadow: 3px 3px grey;
+  overflow-y:scroll;
 }
-
-
-
-
 
 
 h1{
@@ -105,4 +114,19 @@ h1{
   line-height: 0.5vh;
   font-family:Arial, Helvetica, sans-serif;
   text-decoration: line-through;
+}
+
+#inputBox{
+  width: 25vh;
+}
+
+
+#inputBox2{
+  width: 19vh;
+}
+
+.clearButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
