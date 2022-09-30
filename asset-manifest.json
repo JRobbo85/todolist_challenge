@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/todolist_challenge/static/css/main.77ffd3d1.css",
-    "main.js": "/todolist_challenge/static/js/main.e941927a.js",
+    "main.css": "/todolist_challenge/static/css/main.6a1a2bcd.css",
+    "main.js": "/todolist_challenge/static/js/main.ce17acfc.js",
     "static/js/787.ff51ac78.chunk.js": "/todolist_challenge/static/js/787.ff51ac78.chunk.js",
     "static/media/twitter.png": "/todolist_challenge/static/media/twitter.afd9173d4ce5023724e8.png",
     "static/media/yt.jpg": "/todolist_challenge/static/media/yt.b495a483fd1e09499c8f.jpg",
     "static/media/linkedin.png": "/todolist_challenge/static/media/linkedin.7ddf2586b0326cf403f9.png",
     "index.html": "/todolist_challenge/index.html",
-    "main.77ffd3d1.css.map": "/todolist_challenge/static/css/main.77ffd3d1.css.map",
-    "main.e941927a.js.map": "/todolist_challenge/static/js/main.e941927a.js.map",
+    "main.6a1a2bcd.css.map": "/todolist_challenge/static/css/main.6a1a2bcd.css.map",
+    "main.ce17acfc.js.map": "/todolist_challenge/static/js/main.ce17acfc.js.map",
     "787.ff51ac78.chunk.js.map": "/todolist_challenge/static/js/787.ff51ac78.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.77ffd3d1.css",
-    "static/js/main.e941927a.js"
+    "static/css/main.6a1a2bcd.css",
+    "static/js/main.ce17acfc.js"
   ]
 }
